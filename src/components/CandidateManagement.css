@@ -1,0 +1,361 @@
+/* ===== Candidate Management Layout ===== */
+.candidate-management {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-light);
+}
+
+.candidate-list {
+  width: 280px;
+  background-color: var(--bg-white);
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+}
+
+.candidate-list-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.candidate-item {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.candidate-item:hover {
+  background-color: var(--bg-light);
+}
+
+.candidate-item.selected {
+  background-color: #eff6ff;
+  border-left: 3px solid var(--primary-color);
+}
+
+.candidate-name {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.candidate-email {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.score-badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.score-badge.high {
+  background-color: #ecfdf5;
+  color: #065f46;
+}
+
+.score-badge.medium {
+  background-color: #fffbeb;
+  color: #92400e;
+}
+
+.score-badge.low {
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.candidate-header {
+  margin-bottom: 1.5rem;
+}
+
+.candidate-header h1 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-dark);
+  font-size: 1.5rem;
+}
+
+.candidate-header p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+/* ===== Tab Navigation ===== */
+.tab-navigation {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab-button {
+  padding: 0.75rem 1rem;
+  border: none;
+  background-color: transparent;
+  color: var(--text-light);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.tab-button:hover {
+  color: var(--text-medium);
+}
+
+.tab-button.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+/* ===== Tab Content ===== */
+.tab-content {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.tab-content h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.tab-content h4 {
+  color: var(--text-medium);
+  margin: 0 0 0.75rem 0;
+  font-size: 0.875rem;
+}
+
+/* ===== Grid Layouts ===== */
+.grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.grid-card {
+  background-color: var(--bg-light);
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.grid-card.center {
+  text-align: center;
+}
+
+.grid-card-label {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-bottom: 0.25rem;
+}
+
+.grid-card-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* ===== Status Badges ===== */
+.status-badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge.in_progress {
+  background-color: #eff6ff;
+  color: var(--primary-color);
+}
+
+.status-badge.completed {
+  background-color: #ecfdf5;
+  color: #065f46;
+}
+
+.status-badge.pending {
+  background-color: var(--bg-light);
+  color: var(--text-medium);
+}
+
+/* ===== Recommendation Boxes ===== */
+.recommendation-box {
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.recommendation-box.success {
+  background-color: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+}
+
+.recommendation-box.warning {
+  background-color: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.recommendation-box.info {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+  color: var(--primary-color);
+}
+
+.recommendation-box strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.recommendation-box p {
+  margin: 0.25rem 0;
+  font-size: 0.75rem;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  padding: 0.625rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #047857;
+}
+
+.btn-secondary {
+  background-color: var(--bg-light);
+  color: var(--text-medium);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--border-color);
+}
+
+/* ===== Skill Gaps ===== */
+.skill-gaps {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 6px;
+}
+
+.skill-gaps-label {
+  font-size: 0.75rem;
+  color: #92400e;
+  font-weight: 600;
+}
+
+.skill-gaps-list {
+  font-size: 0.8125rem;
+  color: #78350f;
+  margin-top: 0.25rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .grid-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .candidate-management {
+    flex-direction: column;
+  }
+
+  .candidate-list {
+    width: 100%;
+    max-height: 200px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .main-content {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .tab-navigation {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+}
+
+/* ===== Utility Classes ===== */
+.mt-20 {
+  margin-top: 1.25rem;
+}
+.mb-20 {
+  margin-bottom: 1.25rem;
+}
+.text-center {
+  text-align: center;
+}
+.text-muted {
+  color: var(--text-light);
+}
+.font-bold {
+  font-weight: 600;
+}
+.rounded {
+  border-radius: 6px;
+}
+.p-3 {
+  padding: 0.75rem;
+}
+.p-4 {
+  padding: 1rem;
+}
