@@ -30,6 +30,26 @@ A modern React-based frontend for an AI-driven recruitment platform with dashboa
 - **Speech Testing** - Voice-based interview capabilities
 - **Feedback Scorecards** - Structured evaluation forms
 
+### 🔒 Enterprise Proctoring System
+
+Real-time interview integrity monitoring with comprehensive violation tracking:
+
+#### Level 1: Basic Proctoring
+
+- **Full-screen Mode** - Enforced fullscreen during interviews
+- **Tab Detection** - Monitor and flag tab switches
+- **Copy/Paste Blocking** - Prevent content copying
+- **Focus Tracking** - Browser window focus monitoring
+- **Time Analytics** - Active vs inactive time tracking
+
+#### Level 2: Advanced Proctoring
+
+- **Webcam Integration** - Real-time video monitoring
+- **Face Detection** - Presence verification using pixel analysis
+- **Multi-face Alert** - Detect additional people in frame
+- **Audio Monitoring** - Microphone activity tracking
+- **Risk Scoring** - Automatic risk level calculation
+
 ### Offers & Communications
 
 - **Offer Management** - Create and track job offers
@@ -93,7 +113,8 @@ frontend/
     │   ├── CandidateManagement.jsx# Manage candidates
     │   ├── ApplicationUpload.jsx # Upload resumes
     │   ├── InterviewScheduler.jsx# Schedule interviews
-    │   ├── InterviewSession.jsx  # Conduct interviews
+    │   ├── InterviewSession.jsx  # Conduct interviews (with proctoring)
+    │   ├── ProctoringSystem.jsx  # 🔒 Enterprise proctoring component
     │   ├── CodingChallenge.jsx   # Code assessment
     │   ├── SpeechTest.jsx        # Voice testing
     │   ├── FeedbackScorecard.jsx # Interview feedback
@@ -112,6 +133,7 @@ frontend/
         ├── CodingChallenge.css
         ├── InterviewScheduler.css
         ├── InterviewSession.css
+        ├── ProctoringSystem.css  # 🔒 Proctoring styles
         ├── JobApplicationForm.css
         ├── JobCreation.css
         ├── JobManagement.css
